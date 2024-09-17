@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status da Loja de Discord</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .status {
+            font-size: 24px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .online {
+            color: green;
+            border: 2px solid green;
+        }
+        .offline {
+            color: red;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Status da Loja de Discord</h1>
+    <div id="status" class="status offline">A loja está Offline</div>
+
+    <script>
+        const lojaStatus = 'offline'; // ou 'online'
+        const statusDiv = document.getElementById('status');
+
+        if (lojaStatus === 'online') {
+            statusDiv.textContent = 'A loja está Online';
+            statusDiv.classList.remove('offline');
+            statusDiv.classList.add('online');
+        } else {
+            statusDiv.textContent = 'A loja está Offline';
+            statusDiv.classList.remove('online');
+            statusDiv.classList.add('offline');
+        }
+    </script>
+</body>
+</html>
